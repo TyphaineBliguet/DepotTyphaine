@@ -1,0 +1,112 @@
+---
+title: "Rapport d'Analyse des Données des Manchots"
+author: "Typhaine Bliguet"
+date: "2025-02-04"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+toc: true
+toc_depth: 2
+bibliography: biblio/biblio_tests.bib
+csl: "biblio/isara-iso-690.csl"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+library("palmerpenguins")
+library(ggplot2)
+```
+
+## Contexte
+
+L'objectif de cette analyse est d'explorer le jeu de données *"palmerpenguins"*, qui fournit des informations sur trois espèces de manchots vivant en Antarctique : **Adélie**, **Gentoo** et **Chinstrap** [@hardy_fidelisation_2022]. 
+Ce jeux de données comporte  `r nrow (penguins)` lignes et `r ncol (penguins)` colonnes.
+
+L'analyse porte sur deux aspects principaux :
+
+-   L'étude de la relation entre la longueur et la profondeur du bec des manchots
+-   La distribution de leur masse corporelle
+
+Ces visualisations permettent d'identifier d'éventuelles tendances et différences entre les espèces.
+
+## Description des Données
+
+Le jeu de données "penguins" contient plusieurs variables caractérisant les manchots, notamment :
+
+-   ***bill_length_mm*** : longueur du bec en millimètres
+-   ***bill_depth_mm*** : profondeur du bec en millimètres
+-  ***body_mass_g*** : masse corporelle en grammes
+-   ***species*** : espèce du manchot (Adélie, Gentoo, Chinstrap)
+
+Les données ont été choisies pour observer la morphologie des becs et la répartition des masses corporelles.
+
+## Analyse Graphique
+### Nuage de Points : Relation entre Longueur et Profondeur du Bec
+
+Un premier graphique met en relation la longueur et la profondeur du bec des manchots avec un nuage de points. Chaque point représente un individu, avec :
+
+-   Une ***couleur*** différente selon l'espèce (cyan, magenta, jaune)
+-   Une ***taille*** de cercle proportionnelle à la masse corporelle
+
+```{r 1ergraph, echo=FALSE, eval=TRUE}
+library("palmerpenguins")
+library(ggplot2)
+ggplot(penguins) +
+  geom_point(aes(x = bill_length_mm, y = bill_depth_mm,color = species, size = body_mass_g)) +
+  labs(title = "RELATION LONGUEUR VS PROFONDEUR du bec DES MANCHOTS !!!",
+       x = "LONGUEUR BEC (MM)",
+       y = "PROFONDEUR BEC (MM)") +
+  scale_color_manual(values = c("cyan", "magenta", "yellow")) +
+  theme_dark() +
+  theme(plot.title = element_text(size = 17, face = "bold", color = "purple"),
+        axis.text = element_text(size = 12, angle = 60, color = "red"),
+        legend.text = element_text(size = 10, face = "bold", color = "hotpink"),
+        legend.position = "top")
+```
+
+**Interpretation**
+
+On peut observer que les espèces de manchots présentent des caractéristiques distinctes en termes de becs.{@danone_document_2020}
+
+Les manchots **Gentoo** ont des becs plus **longs**.
+
+Les manchots **Adélie et Chinstrap** ont des longueurs de bec plus proches, mais des **profondeurs variables**.
+
+La **masse corporelle** des manchots semble avoir une certaine **influence sur la taille du bec**. {@edenred_-_2023}
+
+### Histogramme : Distribution de la Masse Corporelle
+Le second graphique analyse la répartition de la masse corporelle des manchots espèce par espèce à l'aide d'un histogramme facetté.{@saraswat_impact_2012}
+
+```{r 2emegraph, echo=FALSE, eval=TRUE}
+ggplot(penguins, aes(x = body_mass_g, fill = species)) +
+  geom_histogram(binwidth = 200, alpha = 1, position = "identity", color = "black") +
+  facet_wrap(vars(species)) +
+  labs(title = "REPARTITION DE LA MASSE CORPORELLE DES MANCHOTS!!!",
+       x = "CORPS MASSE (g)",
+       y = "NBR INDIVIDU") +
+  scale_fill_manual(values = c("red", "green", "blue")) +
+  theme_dark() +
+  theme(plot.title = element_text(size = 20, face = "bold", color = "purple"),
+        axis.text.x = element_text(angle = 90, hjust = 1, color = "orange"),
+        axis.text.y = element_text(color = "brown"),
+        strip.text = element_text(face = "bold", color = "yellow"),
+        legend.position = "top")
+```
+
+**Interprétation**
+
+On remarque que la distribution de la masse est différente selon les **espèces**.
+
+Les manchots **Gentoo** sont globalement plus **lourds**.
+
+Les manchots **Adélie et Chinstrap** ont une masse plus répartie autour de valeurs **intermédiaires**.
+
+Cette analyse met en avant des **différences physiologiques** et éventuellement comportementales entre les espèces.
+
+## Conclusion
+Cette analyse a permis de visualiser des différences notables entre les trois espèces de manchots. Les résultats obtenus sont utiles pour mieux comprendre la morphologie des manchots et leurs caractéristiques physiques.{@danone_annual_2024}
+
+En poursuivant cette analyse, on pourrait explorer d'autres facteurs tels que l'influence de l'habitat sur la morphologie ou encore comparer ces données à d'autres espèces de manchots dans différentes régions.
+
+## Bibliographie
