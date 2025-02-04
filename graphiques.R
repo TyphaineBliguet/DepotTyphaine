@@ -1,16 +1,15 @@
-######ggplot2###
-
+######################### import DONNEES #######################################
 #install.packages("ggplot2")
-library(ggplot2)
-
-######################### import DONNES #######################################
-
 #install.packages("palmerpenguins")
 library("palmerpenguins")
-head(penguins)
 library(ggplot2)
+######################### CONTEXTE #######################################
+##BLiGUET Typhaine
+##Jeux de données ==> Penguins
 
-################### NUAGE DE POINTS ################################## 
+################### 1 er GRAPH : NUAGE DE POINTS ################################## 
+## évolution profondeur de bec en fonction longeur de bec
+## couleur différente pour l'espèce et taille de cercle différente pour la masse des manchots
 
 ggplot(penguins) +
   geom_point(aes(x = bill_length_mm, y = bill_depth_mm,color = species, size = body_mass_g)) +
@@ -24,20 +23,11 @@ ggplot(penguins) +
         legend.text = element_text(size = 10, face = "bold", color = "hotpink"),
         legend.position = "top")
 
-################### BOXPLOT ################################## 
 
-ggplot(penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot() +
-  geom_jitter(aes(x = species, y = flipper_length_mm), col = "black", alpha = 0.5)+
-  labs(title = "Longueur des nageoires par espèces",
-       x = "Espèce",
-       y = "Longueur des nageoires (mm)") +
-  theme_linedraw()+
-  theme(plot.title = element_text(size = 15, face = "bold", color = "hotpink"), 
-        axis.text.x = element_text(size = 10, angle = 60, color = "red"))
+################# 2 ème GRAPH Histogramme ########################
+##comparaison entre même espèce de la masse des manchots
+## un graph par espèce 
 
-
-################# Histogramme ########################
 ggplot(penguins, aes(x = body_mass_g, fill = species)) +
   geom_histogram(binwidth = 200, alpha = 1, position = "identity", color = "black") +
   facet_wrap(vars(species)) +
