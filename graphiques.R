@@ -1,11 +1,11 @@
 ######ggplot2###
 
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
 
 ######################### import DONNES #######################################
 
-install.packages("palmerpenguins")
+#install.packages("palmerpenguins")
 library("palmerpenguins")
 head(penguins)
 library(ggplot2)
@@ -36,16 +36,6 @@ ggplot(penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
   theme(plot.title = element_text(size = 15, face = "bold", color = "hotpink"), 
         axis.text.x = element_text(size = 10, angle = 60, color = "red"))
 
-       
-################### Histogramme ################################## 
-
-ggplot(penguins, aes(x = body_mass_g, fill = species)) +
-  geom_histogram(binwidth = 200, alpha = 0.7, position = "identity") +
-  facet_wrap(vars(species))+
-  labs(title = "Répartition de la masse corporelle des manchots par espèce",
-       x = "Masse corporelle (g)",
-       y = "Nombre d'individus") +
-  theme_minimal()
 
 ################# Histogramme ########################
 ggplot(penguins, aes(x = body_mass_g, fill = species)) +
