@@ -1,12 +1,10 @@
 library(shiny)
 
-# Define UI for application that draws a histogram
 fluidPage(
   
   # Application title
   titlePanel("APPLICATION TEST"),
   
-  # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
       sliderInput("bins",
@@ -17,14 +15,11 @@ fluidPage(
       selectInput("Couleur",
                   "Choisir la couleur",
                   choices = c("lightpink", "lightblue", "lightgreen")),
-      
-      # Autres éléments dans le sidebar
-      radioButtons("choix", "Vous avez ? :",
+            radioButtons("choix", "Vous avez ? :",
                    choices = c("Entre 1 et 18 ans" = "Entre 1 et 18 ans", 
                                "Entre 18 et 30 ans" = "Entre 18 et 30 ans", 
                                "Plus de 30 ans" = "Plus de 30 ans"),
                    selected = "Entre 1 et 18 ans"),
-      
       dateInput(inputId = "idDate", 
                 label = "Entrez votre date de naissance", 
                 format = "dd/mm/yyyy", startview = "month", weekstart = 0, language = "fr"),
