@@ -1,0 +1,116 @@
+---
+title: 'Recherche documentaire : L’impact de la blockchain dans la traçabilité agroalimentaire'
+author: "Typhaine Bliguet"
+date: "2025-02-07"
+output: pdf_document
+toc: true
+toc_depth: 2
+bibliography: biblio/bibliorecherche.bib
+csl: "biblio/isara-iso-690.csl"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+## **Introduction**
+
+  L’industrie agroalimentaire est soumise à des **réglementations strictes** et confrontée à de nombreux défis en matière de **sécurité** et de **transparence**. La sécurité alimentaire est un défi majeur pour les acteurs de la chaîne logistique.  
+
+En effet, les problèmes de **traçabilité** et de **sécurité sanitaire** sont des enjeux majeurs pour l’industrie agroalimentaire. Une contamination alimentaire peut non seulement nuire à la santé publique mais aussi impacter négativement la réputation et les profits des entreprises. 
+
+De plus, des **scandales alimentaires majeurs** (vache folle, viande de cheval) ont renforcé la nécessité d’un suivi **rigoureux** des produits pour conserver la confiance des consommateurs. Enfin, la **complexité des chaînes d’approvisionnement** rendent de plus en plus complexe et lent, l’identification de l’origine d’un problème dans la chaîne d’approvisionnement en raison d’un manque de traçabilité et de transparence.
+
+La **blockchain** apparaît donc comme une solution innovante pour moderniser le secteur, garantir la traçabilité et restaurer la confiance des consommateurs. 
+
+##  **Fonctionnement de la blockchain appliqué à l’agroalimentaire**
+### Définition 
+
+La **blockchain** est une base de données **infalsifiable**, fonctionnant comme un registre numérique **décentralisé** et **sécurisé**, qui enregistre chaque transaction sous forme de blocs interconnectés et cryptés, de façon permanente et vérifiable sans nécessiter de tiers de confiance (ex : banque, notaire). Elle constitue une base de données qui contient l’historique de tous les échanges effectués entre ses utilisateurs (producteurs, transformateurs et distributeurs) depuis sa création.{@carrefour_blockchain_2024}
+
+Elle repose sur trois technologies clés :
+
+- **Réseau pair-à-pair** (P2P) : les données sont stockées sur plusieurs ordinateurs (nœuds) au lieu d’un serveur central.
+- **Cryptographie avancée** : chaque transaction est chiffrée et liée aux précédentes sous forme de blocs connectés (d’où le nom de blockchain).
+- **Preuve de validation** (Proof of Work ou Proof of Stake) : chaque transaction doit être validée par plusieurs acteurs du réseau avant d’être ajoutée à la chaîne.
+
+Une fois enregistrée, une information dans la blockchain ne peut plus être modifiée. Cela garantit **l’intégrité des données** et évite toute **falsification**.{@hardelin_perspectives_2019}
+
+Son intégration dans la Supply Chain agroalimentaire offre plusieurs avantages :
+
+- **Traçabilité totale** : Suivi précis de l'origine des produits, depuis la production jusqu'à la distribution.
+- **Sécurisation des données** : Impossibilité de falsifier les informations grâce au chiffrement.
+- **Visibilité accrue** : Transparence pour tous les acteurs, y compris les consommateurs.{@netter_blockchain_2019}
+- **Stockage d’informations** relatives au produits, sa provenance, son lieu d’élevage ou son mode de production.
+
+### Différents types de blockchains
+
+Il existe trois types de blockchains selon leur niveau d’accès et de gouvernance :
+
+| **Type de Blockchain** | **Accès**                    | **Transparence**        | **Acteurs impliqués**                                                   |
+|------------------------|------------------------------|-------------------------|-------------------------------------------------------------------------|
+| **Publique**            | Accessible à tous            | Très transparente       | Tout le monde peut ajouter et valider des transactions                  |
+| **Privée**              | Restreinte à une organisation | Contrôlée par l’entreprise| Seuls les membres autorisés peuvent modifier les données               |
+| **Hybride**             | Mixte                        | Transparence partielle  | Contrôle partagé entre plusieurs acteurs (ex : consortiums)             |
+{@hardelin_perspectives_2019}
+
+Dans l’agroalimentaire, les blockchains **hybrides et privées** sont les plus utilisées car elles permettent de *contrôler* l’accès aux données tout en garantissant une certaine *transparence*. 
+
+Les blockchains **publiques** (sans autorisation) requièrent un *consensus énergétique élevé* (comme le Bitcoin). Elles permettent un enregistrement décentralisé, mais au prix d’une lourdeur et d’un coût énergétique important.
+Les blockchains **privées** (avec autorisation) sont plus *rapides* et moins gourmandes en ressources.
+
+La blockchain permet d’utiliser des **contrats intelligents (smart contracts)**, qui automatisent les transactions dès que les conditions sont remplies. Ils permettent de garantir l’exécution des contrats sans intervention humaine. Toutefois, ces contrats automatiques posent plusieurs problèmes :
+
+- Ils ne tiennent pas compte de la **flexibilité** et de **l’équité** du droit
+- Ils **renforcent le pouvoir** des acteurs dominants dans une transaction.
+- Ils pourraient nécessiter un accompagnement juridique en amont pour s’assurer que le code informatique traduit bien la volonté contractuelle.{@supplychaininfo_blockchain_2024}
+
+## **Cas concrets d'utilisation, exemple de WALMART**
+### L’intégration de la blockchain chez Walmart
+
+Après plusieurs essais infructueux avec d’autres technologies, Walmart a identifié la blockchain comme la solution la plus efficace pour améliorer la traçabilité alimentaire. Elle permet un **suivi instantané des produits**, **garantit des données infalsifiables** et assure une **transparence totale** pour tous les acteurs de la chaîne d’approvisionnement.
+
+Deux produits ont été sélectionnés pour tester cette technologie :
+
+- **Le porc en Chine** : les certificats d’authenticité sont désormais enregistrés sur la blockchain, renforçant ainsi la traçabilité et la sécurité sanitaire.
+- **Les mangues aux États-Unis** : le temps nécessaire pour retracer leur origine est passé de 7 jours à seulement 2,2 secondes, une avancée majeure dans la gestion des crises sanitaires.{@saucede_perspectives_2022}
+
+### Les bénéfices de la blockchain pour Walmart 
+
+- **Traçabilité et sécurité** : suivi en temps réel des produits, lutte contre la fraude et détection rapide des contaminations pour limiter les rappels.
+- **Confiance et transparence** : les consommateurs peuvent vérifier l’origine et la qualité des aliments, renforçant ainsi leur confiance.
+- **Efficacité logistique** : réduction des délais de recherche, automatisation du suivi et diminution des erreurs humaines.
+- **Réduction des coûts** : meilleure gestion des rappels, limitation du gaspillage et baisse des dépenses liées aux enquêtes sanitaires.{@riabova_cas_2024}
+
+Grâce à la blockchain, Walmart a révolutionné la gestion de sa chaîne d’approvisionnement et prouve que cette technologie est un levier essentiel pour garantir **sécurité, efficacité et transparence** dans le secteur agroalimentaire.{@supplychaininfo_blockchain_2024}
+
+## **Enjeux et limites**
+
+Malgré ses nombreux avantages, la blockchain reste peu utilisée dans la gestion des chaînes d’approvisionnement. Plusieurs obstacles ralentissent son adoption :
+
+- **Coût élevé des infrastructures** : La mise en place d’un système blockchain nécessite des investissements importants en équipements et en formation.
+- **Fiabilité des données enregistrées** : La blockchain ne garantit pas que les informations saisies soient exactes. Si une entreprise entre de fausses données (ex : fausse provenance d’un produit), elles resteront stockées.
+- **Fragmentation des initiatives** : Plusieurs blockchains existent mais elles ne sont pas toujours compatibles entre elles. Il manque des standards communs pour harmoniser le marché.
+- **Consommation énergétique** : Certaines blockchains nécessitent une énorme puissance de calcul, posant un problème écologique (ex : Bitcoin). {@hardelin_perspectives_2019}
+- **Formation des équipes** : Sensibilisation et formation des acteurs à l'utilisation de la blockchain. 
+- **Besoin de personnel qualifié** :  Peu de professionnels formés pour gérer des blockchains d’entreprise.
+- **Problème de scalabilité** : Plus le réseau de participants est grand, plus les transactions deviennent lentes et coûteuses.
+- **Incertitudes réglementaires** : Manque de cadre juridique clair pour l’utilisation de la blockchain en supply chain. Validité légale des enregistrements sur blockchain encore floue.{@supplychaininfo_blockchain_2024}
+
+## **Perspectives et avenir de la blockchain dans l’agroalimentaire**
+
+La blockchain offre de nombreuses possibilités pour **améliorer la traçabilité**, la **transparence et la sécurité** tout au long de la chaîne de valeur. À l'avenir, son rôle dans la gestion des certifications et *labels alimentaires*, comme ceux relatifs à l’*agriculture biologique* ou au *commerce équitable*, pourrait se généraliser. Elle garantira une **fiabilité** accrue des certifications, renforçant ainsi la lutte contre la **fraude** et protégeant les consommateurs.
+
+**L'automatisation des assurances agricoles** est également un domaine dans lequel la blockchain pourrait faire une différence majeure. Grâce à l’utilisation de *smart contracts*, les processus de compensation en cas de catastrophes naturelles, tels que la sécheresse, seraient rendus plus **transparents et rapides**. Cela permettra de réduire les délais d’indemnisation et d’offrir un soutien plus direct aux agriculteurs en période de crise. {@netter_blockchain_2019}
+
+En parallèle, la **sécurisation des registres fonciers** grâce à la blockchain pourrait améliorer l’accès au crédit et prévenir les conflits de propriété, notamment dans les pays en développement. Cette fonctionnalité pourrait s'étendre à d’autres secteurs agricoles, soutenant ainsi un développement plus équitable et durable.
+
+D'un point de vue logistique, la blockchain offre des avantages considérables pour **l’optimisation des stocks alimentaires**, particulièrement dans un contexte où les produits sont soumis à des contraintes spécifiques comme la *périssabilité*. En permettant un suivi en temps réel des conditions de stockage, elle assure une meilleure gestion des ressources, réduisant les risques de **ruptures de stock** et optimisant la gestion des denrées. Cette transparence accrue pourrait également être utilisée pour surveiller la qualité des produits et garantir qu'ils respectent les **normes sanitaires et environnementales**.
+
+Enfin, **l’implication croissante des gouvernements**, à travers des projets pilotes et des soutiens financiers, comme le plan d’investissement de ***4,5 milliards d’euros*** en France, montre que l’avenir de la blockchain dans l’agroalimentaire est prometteur. En soutenant l’intégration de la blockchain et en développant un cadre juridique favorable, les États jouent un rôle clé dans l’accélération de son adoption. Ces investissements contribueront à transformer la blockchain en un **levier stratégique** pour moderniser et sécuriser les chaînes d’approvisionnement alimentaires.{@hardelin_perspectives_2019}
+
+## **Conclusion**
+
+En conclusion, la blockchain se positionne comme une technologie clé pour **renforcer la traçabilité**, la **sécurité** et **l’efficacité** dans **l’agroalimentaire**. Son adoption progressive, illustrée par des initiatives comme celle de Walmart, prouve qu’elle ne se limite pas à une tendance passagère, mais constitue un véritable levier d’innovation. Malgré certains défis liés aux coûts, à la réglementation et à l’interopérabilité, son développement devrait s’accélérer, favorisant ainsi une supply chain plus transparente et fiable. À terme, la blockchain pourrait devenir un standard incontournable pour garantir la qualité et la confiance des consommateurs dans l’industrie alimentaire.
+
+## **Bibliographie**
